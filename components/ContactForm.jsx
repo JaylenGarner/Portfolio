@@ -38,58 +38,62 @@ const ContactForm = () => {
     }
   };
 
-  return complete === true ? (
-    <CardContainer
-      title={`Email Recieved`}
-      description="Thanks for reaching out, I'll be in touch with you soon"
-    />
-  ) : (
-    <CardContainer title="Contact Me" description="Let's get in touch!">
-      <form className="space-y-4 text-center" onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Name"
-          className="h-12"
-          required
+  return (
+    <div className=" flex items-center justify-center">
+      {complete === true ? (
+        <CardContainer
+          title={`Email Recieved`}
+          description="Thanks for reaching out, I'll be in touch with you soon"
         />
-        <Input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          className="h-12"
-          required
-        />
-        <Input
-          type="text"
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-          placeholder="Subject"
-          className="h-12"
-          required
-        />
+      ) : (
+        <CardContainer title="Contact Me" description="Let's get in touch!">
+          <form className="space-y-4 text-center" onSubmit={handleSubmit}>
+            <Input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Name"
+              className="h-12"
+              required
+            />
+            <Input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
+              className="h-12"
+              required
+            />
+            <Input
+              type="text"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              placeholder="Subject"
+              className="h-12"
+              required
+            />
 
-        <Textarea
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="Message..."
-          className="h-[200px] resize-none"
-          required
-        />
-        {isLoading === false ? (
-          <Button type="submit" variant="secondary" className="h-12 w-40">
-            Send
-          </Button>
-        ) : (
-          <Button disabled className="h-12 w-40 space-x-2">
-            <Loader2 className="animate-spin" />
-            <span>Sending Email</span>
-          </Button>
-        )}
-      </form>
-    </CardContainer>
+            <Textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Message..."
+              className="h-[200px] resize-none"
+              required
+            />
+            {isLoading === false ? (
+              <Button type="submit" variant="secondary" className="h-12 w-40">
+                Send
+              </Button>
+            ) : (
+              <Button disabled className="h-12 w-40 space-x-2">
+                <Loader2 className="animate-spin" />
+                <span>Sending Email</span>
+              </Button>
+            )}
+          </form>
+        </CardContainer>
+      )}
+    </div>
   );
 };
 
