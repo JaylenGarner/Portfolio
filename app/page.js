@@ -1,9 +1,9 @@
-import SchedulingArea from "@/components/SchedulingArea";
+import ContactForm from "@/components/ContactForm";
 
 const Home = () => {
   return (
     <main className="flex flex-col">
-      <SchedulingArea />
+      <ContactForm />
     </main>
   );
 };

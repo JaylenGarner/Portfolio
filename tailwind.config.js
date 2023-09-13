@@ -1,12 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // Can be safely removed in newer versions of Next.js
+  future: {
+    webpack5: true,
+  },
+
+  webpack(config) {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+
+      fs: false,
+    };
+
+    return config;
+  },
+
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
-	],
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -73,4 +88,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
