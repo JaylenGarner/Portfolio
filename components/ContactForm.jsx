@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
-import { Check } from "lucide-react";
-import CardContainer from "./CardContainer";
 
+import CardContainer from "./CardContainer";
 import handleEmail from "@/lib/handleEmail";
 
 const ContactForm = () => {
@@ -39,7 +38,16 @@ const ContactForm = () => {
   };
 
   return (
-    <div className=" flex items-center justify-center">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: "spring",
+        damping: 50,
+        stiffness: 80,
+      }}
+      className=" flex items-center justify-center"
+    >
       {complete === true ? (
         <CardContainer
           title={`Email Recieved`}
@@ -93,7 +101,7 @@ const ContactForm = () => {
           </form>
         </CardContainer>
       )}
-    </div>
+    </motion.div>
   );
 };
 
