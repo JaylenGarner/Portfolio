@@ -5,9 +5,11 @@ import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Moon } from "lucide-react";
 
+import ContactForm from "./ContactForm";
+
 const Bio = () => {
   return (
-    <div className=" flex w-full items-center justify-center">
+    <div className="flex flex-col justify-center space-y-8 sticky top-20 z-10">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
@@ -50,7 +52,7 @@ const Bio = () => {
           </motion.a>
         </div>
 
-        <p className=" pt-8 text-lg max-w-[600px] text-[#8AA3AD]">
+        <p className=" pt-8 text-lg max-w-[600px] text-muted-foreground">
           Hi, I'm Jaylen, a software engineer who loves crafting creative
           solutions. I specialize in developing software applications that blend
           design and functionality. With a passion for programming, I take pride
@@ -58,6 +60,8 @@ const Bio = () => {
           skillset.
         </p>
       </motion.div>
+
+      <ContactForm />
     </div>
   );
 };
