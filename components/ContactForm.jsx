@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
+import Tilt from "react-parallax-tilt";
 
 import CardContainer from "./CardContainer";
 import handleEmail from "@/lib/handleEmail";
@@ -61,7 +62,7 @@ const ContactForm = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Name"
-              className="h-12"
+              className="h-12 outline-none"
               required
             />
             <Input

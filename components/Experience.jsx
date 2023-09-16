@@ -9,11 +9,31 @@ import {
 } from "./ui/card";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
 const Experience = () => {
   return (
-    <div className="pt-4 pb-20 space-y-4">
-      <div>
+    <motion.div
+      className="pt-4 pb-20 space-y-4"
+      initial={{ opacity: 0, x: 30 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        type: "spring",
+        damping: 50,
+        stiffness: 80,
+      }}
+    >
+      <Tilt
+        glareEnable
+        glarePosition="all"
+        glareColor="#384E5C"
+        glareMaxOpacity={0.5}
+        tiltMaxAngleX={10}
+        tiltMaxAngleY={10}
+        transitionSpeed={2000}
+        scale={1.05}
+      >
         <Link href="https://moonraydevelopment.com/" target="_blank">
           <Card className="w-[600px] h-fit cursor-pointer">
             <CardHeader>
@@ -34,9 +54,18 @@ const Experience = () => {
             </CardContent>
           </Card>
         </Link>
-      </div>
+      </Tilt>
 
-      <div>
+      <Tilt
+        glareEnable
+        glarePosition="all"
+        glareColor="#384E5C"
+        glareMaxOpacity={0.5}
+        tiltMaxAngleX={10}
+        tiltMaxAngleY={10}
+        transitionSpeed={2000}
+        scale={1.05}
+      >
         <Link href="https://trsconsulting.com/" target="_blank">
           <Card className="w-[600px] h-fit cursor-pointer">
             <CardHeader>
@@ -56,9 +85,18 @@ const Experience = () => {
             </CardContent>
           </Card>
         </Link>
-      </div>
+      </Tilt>
 
-      <div>
+      <Tilt
+        glareEnable
+        glarePosition="all"
+        glareColor="#384E5C"
+        glareMaxOpacity={0.5}
+        tiltMaxAngleX={10}
+        tiltMaxAngleY={10}
+        transitionSpeed={2000}
+        scale={1.05}
+      >
         <Link href="https://www.easternct.edu/" target="_blank">
           <Card className="w-[600px] h-fit cursor-pointer">
             <CardHeader>
@@ -77,8 +115,8 @@ const Experience = () => {
             </CardContent>
           </Card>
         </Link>
-      </div>
-    </div>
+      </Tilt>
+    </motion.div>
   );
 };
 
