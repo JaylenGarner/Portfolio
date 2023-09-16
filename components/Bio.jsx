@@ -9,7 +9,7 @@ import ContactForm from "./ContactForm";
 
 const Bio = () => {
   return (
-    <div className="flex flex-col justify-center space-y-8 sticky top-20 z-10">
+    <div className="flex flex-col justify-center space-y-8 max-break-2:w-[400px] overflow-wrap">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
@@ -20,9 +20,13 @@ const Bio = () => {
         }}
         className="flex flex-col"
       >
-        <span className="text-6xl font-bold">Jaylen Garner</span>
+        <span className="text-6xl font-bold max-break-2:text-4xl">
+          Jaylen Garner
+        </span>
         <div className="flex space-x-4 items-center pt-2">
-          <span className="text-3xl pr-2">Software Engineer</span>
+          <span className="text-3xl pr-2 max-break-2:text-xl">
+            Software Engineer
+          </span>
           <motion.a
             href="https://www.linkedin.com/in/jaylen-garner/"
             target="blank_"
@@ -52,7 +56,7 @@ const Bio = () => {
           </motion.a>
         </div>
 
-        <p className=" pt-8 text-lg max-w-[600px] text-muted-foreground">
+        <p className=" pt-8 text-lg break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] max-break-2:text-md text-muted-foreground">
           Hi, I'm Jaylen, a software engineer who loves crafting creative
           solutions. I specialize in developing software applications that blend
           design and functionality. With a passion for programming, I take pride

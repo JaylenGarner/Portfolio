@@ -8,15 +8,15 @@ import {
 
 const CardContainer = ({ title, description, children }) => {
   return (
-    <div className="flex justify-center">
-      <Card className="w-[600px] h-fit">
-        <CardHeader>
-          <CardTitle>{title}</CardTitle>
-          <CardDescription>{description}</CardDescription>
-        </CardHeader>
-        <CardContent>{children}</CardContent>
-      </Card>
-    </div>
+    <Card className="break-1:w-[600px] h-fit max-break-1:w-[500px] max-break-2:[400px]">
+      <CardHeader className="max-break-2:[400px]">
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
+      </CardHeader>
+      <CardContent >
+        {children}
+      </CardContent>
+    </Card>
   );
 };
 

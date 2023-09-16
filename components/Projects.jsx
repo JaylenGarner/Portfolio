@@ -36,10 +36,10 @@ const Projects = () => {
         scale={1.05}
       >
         <Link href="https://outreacher.app/" target="_blank">
-          <Card className="w-[600px] h-fit cursor-pointer">
+          <Card className="break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] h-fit cursor-pointer">
             <CardHeader>
-              <CardTitle>Outreacher</CardTitle>
-              <CardDescription className="text-md">
+              <CardTitle className="max-break-2:text-xl">Outreacher</CardTitle>
+              <CardDescription className="text-md max-break-2:text-sm">
                 A web app that streamlines job searching and networking by
                 helping users organize job applications, track contacts, and
                 create personalized outreach message templates.
@@ -47,7 +47,7 @@ const Projects = () => {
             </CardHeader>
             <CardContent className="font-medium">
               <div className="w-full flex justify-center">
-                <span className="text-center font-bold text-xl">
+                <span className="text-center font-bold text-xl max-break-2:text-lg">
                   Technologies
                 </span>
               </div>
@@ -103,10 +103,10 @@ const Projects = () => {
         scale={1.05}
       >
         <Link href="https://geotemp.vercel.app/" target="_blank">
-          <Card className="w-[600px] h-fit cursor-pointer">
+          <Card className="break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] h-fit cursor-pointer">
             <CardHeader>
-              <CardTitle>GeoTemp</CardTitle>
-              <CardDescription className="text-md">
+              <CardTitle className="max-break-2:text-xl ">GeoTemp</CardTitle>
+              <CardDescription className="text-md max-break-2:text-sm">
                 A web app for up-to-date weather information and 5-day forecasts
                 based on your location or search.
               </CardDescription>
@@ -114,7 +114,7 @@ const Projects = () => {
 
             <CardContent className="font-medium">
               <div className="w-full flex justify-center">
-                <span className="text-center font-bold text-xl">
+                <span className="text-center font-bold text-xl max-break-2:text-lg">
                   Technologies
                 </span>
               </div>

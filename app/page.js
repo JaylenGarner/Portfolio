@@ -2,19 +2,15 @@
 
 import Bio from "@/components/Bio";
 import Feed from "@/components/Feed";
-import ContactForm from "@/components/ContactForm";
-import { ExperienceFeed } from "@/components/Experience";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <main className="grid grid-cols-2 gap-x-20">
-      <div className="w-full flex justify-end items-start pt-20">
+    <main className="grid grid-cols-2 gap-x-10 pr-4 pl-4">
+      <div className="w-full flex justify-end items-start pt-8 h-screen overflow-scroll no-scrollbar pr-5 pl-5 ">
         <Bio />
       </div>
 
-      <div className="w-full flex justify-start items-start pt-20">
+      <div className="w-full flex justify-start items-start pt-8 h-screen overflow-scroll no-scrollbar pr-5 pl-5">
         <Feed />
       </div>
     </main>
