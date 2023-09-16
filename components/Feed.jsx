@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Experience from "./Experience";
+import Projects from "./Projects";
 import { motion } from "framer-motion";
 
 const Feed = ({ children }) => {
@@ -21,15 +22,12 @@ const Feed = ({ children }) => {
         </TabsList>
       </motion.div>
 
-      {/* Content for the "Experience" tab */}
       <TabsContent value="experience">
         <Experience />
       </TabsContent>
 
-      {/* Content for the "Projects" tab */}
       <TabsContent value="projects">
-        {/* Include your Projects content here */}
-        Change your password here.
+        <Projects />
       </TabsContent>
     </Tabs>
   );
