@@ -35,7 +35,7 @@ const Experience = () => {
         scale={1.05}
       >
         <Link href="https://moonraydevelopment.com/" target="_blank">
-          <Card className="break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] h-fit cursor-pointer">
+          <Card className="break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] max-tablet:w-[600px] max-mobile_lg:w-[500px] max-mobile_md:w-[400px]  max-mobile_sm:w-[300px] h-fit cursor-pointer">
             <CardHeader>
               <CardTitle className="max-break-2:text-xl">
                 Full Stack Software Engineer
@@ -69,7 +69,7 @@ const Experience = () => {
         scale={1.05}
       >
         <Link href="https://trsconsulting.com/" target="_blank">
-          <Card className="break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] h-fit cursor-pointer">
+          <Card className="break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] max-tablet:w-[600px] max-mobile_lg:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] h-fit cursor-pointer">
             <CardHeader>
               <CardTitle className="max-break-2:text-xl">
                 Web Developer / IT Consultant
@@ -102,7 +102,7 @@ const Experience = () => {
         scale={1.05}
       >
         <Link href="https://www.easternct.edu/" target="_blank">
-          <Card className="break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] h-fit cursor-pointer">
+          <Card className="break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] max-tablet:w-[600px] max-mobile_lg:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] h-fit cursor-pointer">
             <CardHeader>
               <CardTitle className="max-break-2:text-xl">
                 Information Technology Services

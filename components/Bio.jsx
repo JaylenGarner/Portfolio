@@ -9,7 +9,7 @@ import ContactForm from "./ContactForm";
 
 const Bio = () => {
   return (
-    <div className="flex flex-col justify-center space-y-8 max-break-2:w-[400px] overflow-wrap">
+    <div className="flex flex-col justify-center items-center space-y-8 max-break-2:w-[400px] max-tablet:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] overflow-wrap max-tablet:text-center">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
@@ -23,8 +23,8 @@ const Bio = () => {
         <span className="text-6xl font-bold max-break-2:text-4xl">
           Jaylen Garner
         </span>
-        <div className="flex space-x-4 items-center pt-2">
-          <span className="text-3xl pr-2 max-break-2:text-xl">
+        <div className="flex space-x-4 items-center pt-2 max-tablet:justify-center">
+          <span className="text-3xl pr-2 max-break-2:text-xl max-mobile_sm:text-sm">
             Software Engineer
           </span>
           <motion.a
@@ -56,16 +56,18 @@ const Bio = () => {
           </motion.a>
         </div>
 
-        <p className=" pt-8 text-lg break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] max-break-2:text-md text-muted-foreground">
-          Hi, I'm Jaylen, a software engineer who loves crafting creative
-          solutions. I specialize in developing software applications that blend
-          design and functionality. With a passion for programming, I take pride
-          in delivering high-quality work while continually enhancing my
-          skillset.
+        <p className=" pt-8 max-tablet:pt-4 text-lg break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] max-tablet:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] max-break-2:text-md text-muted-foreground">
+          I'm a software engineer who loves crafting creative solutions. I
+          specialize in developing software applications that blend design and
+          functionality. With a passion for programming, I take pride in
+          delivering high-quality work while continually enhancing my skillset.
         </p>
       </motion.div>
 
-      <ContactForm />
+      {/* Disable on Mobile Devices */}
+      <div className="max-tablet:hidden">
+        <ContactForm />
+      </div>
     </div>
   );
 };

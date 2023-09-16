@@ -88,6 +88,10 @@ module.exports = {
       screens: {
         "break-1": "1420px",
         "break-2": "1200px",
+        tablet: "1010px",
+        mobile_lg: "700px",
+        mobile_md: "580px",
+        mobile_sm: "480px",
       },
     },
   },
