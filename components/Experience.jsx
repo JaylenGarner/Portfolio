@@ -15,7 +15,7 @@ import Tilt from "react-parallax-tilt";
 const Experience = () => {
   return (
     <motion.div
-      className="pt-4 pb-20 space-y-4"
+      className="pt-8 pb-20 space-y-4"
       initial={{ opacity: 0, x: 30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{

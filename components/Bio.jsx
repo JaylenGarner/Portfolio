@@ -23,37 +23,41 @@ const Bio = () => {
         <span className="text-6xl font-bold max-break-2:text-4xl">
           Jaylen Garner
         </span>
-        <div className="flex space-x-4 items-center pt-2 max-tablet:justify-center">
-          <span className="text-3xl pr-2 max-break-2:text-xl max-mobile_sm:text-sm">
+
+        <div className="flex items-center pt-2 max-tablet:justify-center max-tablet:flex-col">
+          <span className="text-3xl tablet:pr-4 max-break-2:text-2xl  font-medium">
             Software Engineer
           </span>
-          <motion.a
-            href="https://www.linkedin.com/in/jaylen-garner/"
-            target="blank_"
-            initial={{ opacity: 1 }}
-            whileHover={{ opacity: 0.6 }}
-            transition={{ duration: 0.6 }}
-          >
-            <LinkedInLogoIcon width={32} height={32} />
-          </motion.a>
-          <motion.a
-            href="https://github.com/JaylenGarner"
-            target="blank_"
-            initial={{ opacity: 1 }}
-            whileHover={{ opacity: 0.6 }}
-            transition={{ duration: 1 }}
-          >
-            <GitHubLogoIcon width={30} height={30} />
-          </motion.a>
-          <motion.a
-            href="https://moonraydevelopment.com/"
-            target="blank_"
-            initial={{ opacity: 1 }}
-            whileHover={{ opacity: 0.6 }}
-            transition={{ duration: 1 }}
-          >
-            <Moon width={30} height={30} />
-          </motion.a>
+
+          <div className="flex space-x-4 items-center max-tablet:justify-center max-tablet:pt-4">
+            <motion.a
+              href="https://www.linkedin.com/in/jaylen-garner/"
+              target="blank_"
+              initial={{ opacity: 1 }}
+              whileHover={{ opacity: 0.6 }}
+              transition={{ duration: 0.6 }}
+            >
+              <LinkedInLogoIcon width={32} height={32} />
+            </motion.a>
+            <motion.a
+              href="https://github.com/JaylenGarner"
+              target="blank_"
+              initial={{ opacity: 1 }}
+              whileHover={{ opacity: 0.6 }}
+              transition={{ duration: 1 }}
+            >
+              <GitHubLogoIcon width={30} height={30} />
+            </motion.a>
+            <motion.a
+              href="https://moonraydevelopment.com/"
+              target="blank_"
+              initial={{ opacity: 1 }}
+              whileHover={{ opacity: 0.6 }}
+              transition={{ duration: 1 }}
+            >
+              <Moon width={30} height={30} />
+            </motion.a>
+          </div>
         </div>
 
         <p className=" pt-8 max-tablet:pt-4 text-lg break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] max-tablet:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] max-break-2:text-md text-muted-foreground">

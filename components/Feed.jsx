@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Feed = ({ children }) => {
   return (
-    <Tabs defaultValue="experience">
+    <Tabs defaultValue="experience" className="tablet:pt-4">
       <motion.div
         className="text-center"
         initial={{ opacity: 0, y: -30 }}

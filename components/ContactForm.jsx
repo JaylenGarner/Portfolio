@@ -53,7 +53,7 @@ const ContactForm = () => {
         damping: 50,
         stiffness: 80,
       }}
-      className=" flex items-center justify-center pb-8 max-break-2:w-[400px] max-tablet:pt-4"
+      className=" flex items-center justify-center pb-8 pt-2 max-break-2:w-[400px] max-tablet:pt-8"
     >
       {complete === true ? (
         <CardContainer
