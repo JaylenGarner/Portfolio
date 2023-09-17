@@ -1,10 +1,9 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Experience from "./Experience";
 import Projects from "./Projects";
-import ContactForm from "./ContactForm";
 import { motion } from "framer-motion";
 
-const Feed = ({ children }) => {
+const Feed = () => {
   return (
     <Tabs defaultValue="experience" className="tablet:pt-4">
       <motion.div

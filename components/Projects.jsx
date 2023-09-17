@@ -37,13 +37,6 @@ const Projects = () => {
       >
         <Link href="https://outreacher.app/" target="_blank">
           <Card className="break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] max-tablet:w-[600px] max-mobile_lg:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] h-fit cursor-pointer">
-            {/* <CardHeader>
-              <CardTitle className="max-break-2:text-xl">Outreacher</CardTitle>
-              <CardDescription className="text-md max-break-2:text-sm">
-                Web Application
-              </CardDescription>
-            </CardHeader> */}
-
             <CardHeader>
               <div className="flex justify-between">
                 <div className=" space-y-1">

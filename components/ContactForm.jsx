@@ -6,14 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "./ui/card";
-
 import CardContainer from "./CardContainer";
 import handleEmail from "@/lib/handleEmail";
 
@@ -53,7 +45,7 @@ const ContactForm = () => {
         damping: 50,
         stiffness: 80,
       }}
-      className=" flex items-center justify-center pb-8 pt-2 max-break-2:w-[400px] max-tablet:pt-8"
+      className="flex items-center justify-center pb-2 pt-2 max-break-2:w-[400px] max-tablet:pt-8 max-tablet:w-[600px] max-mobile_md:w-[400px] max-mobile_sm:w-[320px]"
     >
       {complete === true ? (
         <CardContainer
@@ -67,7 +59,7 @@ const ContactForm = () => {
           className="max-break-2:w-[390px]"
         >
           <form
-            className="space-y-4 text-center w-full"
+            className="space-y-4 text-center w-full "
             onSubmit={handleSubmit}
           >
             <Input
