@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <main className="grid grid-cols-2 max-tablet:grid-cols-1 gap-x-10 pr-4 pl-4">
-      <div className="max-tablet:justify-center  w-full flex justify-end items-start pt-8 tablet:h-screen tablet:overflow-scroll no-scrollbar pr-5 pl-5 ">
+      <div className="max-tablet:justify-center  w-full flex justify-end items-start pt-8 tablet:h-screen tablet:overflow-scroll no-scrollbar">
         <Bio />
       </div>
 
@@ -30,7 +30,7 @@ const Home = () => {
         {formOpen && <ContactForm />}
       </motion.div>
 
-      <div className="max-tablet:justify-center w-full flex justify-start items-start pt-8 tablet:h-screen tablet:overflow-scroll no-scrollbar pr-10">
+      <div className="max-tablet:justify-center w-full flex justify-start items-start pt-8 tablet:h-screen tablet:overflow-scroll no-scrollbar ">
         <Feed />
       </div>
     </main>

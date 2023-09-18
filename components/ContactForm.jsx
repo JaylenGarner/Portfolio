@@ -45,7 +45,7 @@ const ContactForm = () => {
         damping: 50,
         stiffness: 80,
       }}
-      className="flex items-center justify-center pb-2 pt-2 max-break-2:w-[400px] max-tablet:pt-8 max-tablet:w-[600px] max-mobile_md:w-[400px] max-mobile_sm:w-[320px]"
+      className="tablet:pb-20 flex items-center justify-center pb-2 pt-2 max-break-2:w-[400px] max-tablet:pt-8 max-tablet:w-[600px] max-mobile_md:w-[400px] max-mobile_sm:w-[320px]"
     >
       {complete === true ? (
         <CardContainer

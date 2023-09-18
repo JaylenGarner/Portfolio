@@ -9,7 +9,7 @@ import ContactForm from "./ContactForm";
 
 const Bio = () => {
   return (
-    <div className="flex flex-col justify-center items-center space-y-8 max-break-2:w-[400px] max-tablet:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] overflow-wrap max-tablet:text-center">
+    <div className="tablet:mr-10 flex flex-col justify-center items-center space-y-8 max-break-2:w-[400px] max-tablet:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] overflow-wrap max-tablet:text-center">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
