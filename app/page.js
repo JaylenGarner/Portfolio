@@ -30,7 +30,7 @@ const Home = () => {
         {formOpen && <ContactForm />}
       </motion.div>
 
-      <div className="max-tablet:justify-center w-full flex justify-start items-start pt-8 tablet:h-screen tablet:overflow-scroll no-scrollbar pr-5 pl-5">
+      <div className="max-tablet:justify-center w-full flex justify-start items-start pt-8 tablet:h-screen tablet:overflow-scroll no-scrollbar pr-10">
         <Feed />
       </div>
     </main>
