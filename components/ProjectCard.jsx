@@ -60,7 +60,7 @@ const ProjectCard = ({ project }) => {
             <div className="flex justify-center items-center pt-2 space flex-wrap">
               {project.technologies.map((technology) => {
                 return (
-                  <Badge variant="outline" className="m-1">
+                  <Badge variant="outline" className="m-1" key={technology}>
                     {technology}
                   </Badge>
                 );

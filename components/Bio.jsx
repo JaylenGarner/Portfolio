@@ -32,7 +32,7 @@ const Bio = () => {
           <div className="flex space-x-4 items-center max-tablet:justify-center max-tablet:pt-4">
             <motion.a
               href="https://www.linkedin.com/in/jaylen-garner/"
-              target="blank_"
+              target="_blank"
               initial={{ opacity: 1 }}
               whileHover={{ opacity: 0.6 }}
               transition={{ duration: 0.6 }}
@@ -41,7 +41,7 @@ const Bio = () => {
             </motion.a>
             <motion.a
               href="https://github.com/JaylenGarner"
-              target="blank_"
+              target="_blank"
               initial={{ opacity: 1 }}
               whileHover={{ opacity: 0.6 }}
               transition={{ duration: 1 }}
@@ -50,7 +50,7 @@ const Bio = () => {
             </motion.a>
             <motion.a
               href="https://moonraydevelopment.com/"
-              target="blank_"
+              target="_blank"
               initial={{ opacity: 1 }}
               whileHover={{ opacity: 0.6 }}
               transition={{ duration: 1 }}

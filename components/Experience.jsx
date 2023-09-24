@@ -17,7 +17,9 @@ const Experience = () => {
       }}
     >
       {experiences.map((experience) => {
-        return <ExperienceCard experience={experience} />;
+        return (
+          <ExperienceCard experience={experience} key={experience.title} />
+        );
       })}
     </motion.div>
   );

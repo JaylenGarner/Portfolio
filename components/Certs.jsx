@@ -17,7 +17,7 @@ const Certs = () => {
       }}
     >
       {certs.map((cert) => {
-        return <CertCard cert={cert} />;
+        return <CertCard cert={cert} key={cert.name} />;
       })}
     </motion.div>
   );

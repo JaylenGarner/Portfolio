@@ -17,7 +17,7 @@ const Projects = () => {
       }}
     >
       {projects.map((project) => {
-        return <ProjectCard project={project} />;
+        return <ProjectCard project={project} key={project.title} />;
       })}
     </motion.div>
   );
