@@ -36,8 +36,12 @@ const ProjectCard = ({ project }) => {
                 </CardDescription>
               </div>
               <img
-                className={`w-${project.logo.width} h-${project.logo.height}`}
+                style={{
+                  width: `${project.logo.size}px`,
+                  height: `${project.logo.size}px`,
+                }}
                 src={project.logo.path}
+                alt={project.logo.alt}
               ></img>
             </div>
           </CardHeader>

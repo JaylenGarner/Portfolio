@@ -91,7 +91,7 @@
 }
 
 .feed {
-  @apply pt-8 pb-20 space-y-4 pl-10 pr-10
+  @apply pt-8 pb-20 space-y-6 pl-10 pr-10
 }
 
 .card {

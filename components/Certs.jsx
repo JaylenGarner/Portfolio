@@ -1,10 +1,10 @@
 "use client";
 
-import ExperienceCard from "./ExperienceCard";
-import experiences from "@/lib/experiences";
+import certs from "@/lib/certs";
+import CertCard from "./CertCard";
 import { motion } from "framer-motion";
 
-const Experience = () => {
+const Certs = () => {
   return (
     <motion.div
       className="feed"
@@ -16,11 +16,11 @@ const Experience = () => {
         stiffness: 80,
       }}
     >
-      {experiences.map((experience) => {
-        return <ExperienceCard experience={experience} />;
+      {certs.map((cert) => {
+        return <CertCard cert={cert} />;
       })}
     </motion.div>
   );
 };
 
-export default Experience;
+export default Certs;

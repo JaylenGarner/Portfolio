@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Experience from "./Experience";
 import Projects from "./Projects";
+import Certs from "./Certs";
 import { motion } from "framer-motion";
 
 const Feed = () => {
@@ -19,6 +20,7 @@ const Feed = () => {
         <TabsList className="text-center">
           <TabsTrigger value="experience">Experience</TabsTrigger>
           <TabsTrigger value="projects">Projects</TabsTrigger>
+          <TabsTrigger value="certifications">Certifications</TabsTrigger>
         </TabsList>
       </motion.div>
 
@@ -28,6 +30,10 @@ const Feed = () => {
 
       <TabsContent value="projects">
         <Projects />
+      </TabsContent>
+
+      <TabsContent value="certifications">
+        <Certs />
       </TabsContent>
     </Tabs>
   );
