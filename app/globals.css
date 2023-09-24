@@ -89,3 +89,11 @@
     }
   }
 }
+
+.feed {
+  @apply pt-8 pb-20 space-y-4 pl-10 pr-10
+}
+
+.card {
+  @apply break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] max-tablet:w-[600px] max-mobile_lg:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] h-fit cursor-pointer
+}
