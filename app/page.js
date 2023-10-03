@@ -38,16 +38,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{
-  /* <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        type: "spring",
-        damping: 50,
-        stiffness: 80,
-      }}
-      className="flex items-center justify-center pb-2 pt-2 max-break-2:w-[400px] max-tablet:pt-8 max-tablet:w-[600px] max-mobile_md:w-[400px] max-mobile_sm:w-[320px]"
-    ></motion.div> */
-}
