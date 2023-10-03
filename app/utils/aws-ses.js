@@ -1,5 +1,5 @@
 import AWS from "aws-sdk";
-import createHtmlSignature from "./createHtmlSignature";
+import createHtmlTemplate from "./createHtmlTemplate";
 
 AWS.config.update({
   region: "us-east-2",
@@ -10,7 +10,7 @@ AWS.config.update({
 const ses = new AWS.SES({ apiVersion: "2010-12-01" });
 
 export const sendEmail = async (body) => {
-  const emailHtml = createHtmlSignature(body);
+  const emailHtml = createHtmlTemplate(body);
 
   const params = {
     Source: "jaylen@moonraydevelopment.com",
