@@ -36,6 +36,7 @@ const ProjectCard = ({ project }) => {
                 </CardDescription>
               </div>
               <img
+                className="grayscale"
                 style={{
                   width: `${project.logo.size}px`,
                   height: `${project.logo.size}px`,
