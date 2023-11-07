@@ -5,7 +5,8 @@ import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Moon } from "lucide-react";
 
-import ContactForm from "./ContactForm";
+// import ContactForm from "./ContactForm";
+import ContactSection from "./ContactSection";
 
 const Bio = () => {
   return (
@@ -70,7 +71,7 @@ const Bio = () => {
 
       {/* Disable on Mobile Devices */}
       <div className="max-tablet:hidden">
-        <ContactForm />
+        <ContactSection />
       </div>
     </div>
   );
