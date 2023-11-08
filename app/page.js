@@ -2,8 +2,7 @@
 
 import Bio from "@/components/Bio";
 import Feed from "@/components/Feed";
-// import ContactForm from "@/components/ContactForm";
-import ContactSection from "@/components/ContactSection";
+import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -28,7 +27,7 @@ const Home = () => {
         }}
       >
         <Button onClick={() => setFormOpen(!formOpen)}>Contact Me</Button>
-        {formOpen && <ContactSection />}
+        {formOpen && <ContactForm />}
       </motion.div>
 
       <div className="max-tablet:justify-center w-full flex justify-start items-start pt-8 tablet:h-screen tablet:overflow-scroll no-scrollbar ">

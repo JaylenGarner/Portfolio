@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { CalendarIcon } from "@radix-ui/react-icons";
 import { Moon } from "lucide-react";
 
-// import ContactForm from "./ContactForm";
-import ContactSection from "./ContactSection";
+import ContactForm from "./ContactForm";
 
 const Bio = () => {
   return (
@@ -50,6 +50,15 @@ const Bio = () => {
               <GitHubLogoIcon width={30} height={30} />
             </motion.a>
             <motion.a
+              href="https://calendly.com/jaylen-garner"
+              target="_blank"
+              initial={{ opacity: 1 }}
+              whileHover={{ opacity: 0.6 }}
+              transition={{ duration: 1 }}
+            >
+              <CalendarIcon width={30} height={30} />
+            </motion.a>
+            <motion.a
               href="https://moonraydevelopment.com/"
               target="_blank"
               initial={{ opacity: 1 }}
@@ -71,7 +80,7 @@ const Bio = () => {
 
       {/* Disable on Mobile Devices */}
       <div className="max-tablet:hidden">
-        <ContactSection />
+        <ContactForm />
       </div>
     </div>
   );
