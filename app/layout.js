@@ -1,9 +1,9 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Navigation from "@/components/Navigation";
 
 import { Analytics } from "@vercel/analytics/react";
+
+import { rubik } from "../lib/fonts";
 
 export const metadata = {
   title: "Jaylen Garner",
@@ -12,8 +12,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
-      <body className={inter.className}>
+    <html lang="en">
+      <body className={`text-[#66fcf1] ${rubik.className} `}>
+        <Navigation />
         {children}
         <Analytics />
       </body>

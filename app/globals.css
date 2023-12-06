@@ -90,6 +90,31 @@
   }
 }
 
+/* General */
+
+.flex_center {
+  @apply flex justify-center items-center
+}
+
+.button {
+  @apply border
+}
+
+/* Navigation */
+
+/* Forms */
+.form_field {
+  @apply border p-2 rounded-md w-full text-sm placeholder:text-slate-600 m-2 focus:outline-[#1F2833]
+}
+
+.input {
+  @apply form_field h-12
+}
+
+.textarea {
+  @apply form_field h-[200px] resize-none
+}
+
 .feed {
   @apply pt-8 pb-20 space-y-6 pl-10 pr-10
 }

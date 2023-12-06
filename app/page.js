@@ -1,37 +1,43 @@
-"use client";
-
-import Bio from "@/components/Bio";
-import Feed from "@/components/Feed";
+import { anton, permanentMarker } from "@/lib/fonts";
 import ContactForm from "@/components/ContactForm";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import ContactFormNew from "@/components/ContactFormNew";
 
 const Home = () => {
-  const [formOpen, setFormOpen] = useState(false);
-
   return (
-    <main className="grid grid-cols-2 max-tablet:grid-cols-1 gap-x-10 pr-4 pl-4">
-      <div className="max-tablet:justify-center  w-full flex justify-end items-start pt-8 tablet:h-screen tablet:overflow-scroll no-scrollbar">
-        <Bio />
-      </div>
+    <main className="bg-ice bg-cover min-h-screen  bg-blend-darken bg-black bg-opacity-80">
+      <div className="pt-[180px] flex flex-col items-center p-16">
+        <h1
+          className={`text-8xl font-bold pb-16 text-center ${permanentMarker.className}`}
+        >
+          Jaylen Garner
+        </h1>
+        <h2
+          className={`text-5xl font-bold pb-16 text-center tracking-wide ${anton.className}`}
+        >
+          Crafting Dreams, One Pixel at a Time
+        </h2>
 
-      <motion.div
-        className="flex tablet:hidden pt-8 items-center flex-col"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          type: "spring",
-          damping: 50,
-          stiffness: 80,
-        }}
-      >
-        <Button onClick={() => setFormOpen(!formOpen)}>Contact Me</Button>
-        {formOpen && <ContactForm />}
-      </motion.div>
+        <p className="w-[820px] text-2xl font-semibold pb-16">
+          Having navigated the intricacies of IT, I've discovered my sweet spot
+          in the dynamic world of full-stack development. The ability to wield
+          the skills and tools to breathe life into visions, both mine and
+          others, is a fulfillment I never thought I'd find in my work. To me,
+          this is an art form, and the DOM is my canvas. This realization
+          propelled me to kickstart my own freelance web development business as
+          well as sink my teeth into various personal projects. In a field where
+          there are endless things to learn, I'm assured that I'll never be
+          bored. Feel free to stick around and explore some of my work. I'll be
+          here, clacking away at my keys in the meantime.
+        </p>
 
-      <div className="max-tablet:justify-center w-full flex justify-start items-start pt-8 tablet:h-screen tablet:overflow-scroll no-scrollbar ">
-        <Feed />
+        <h2
+          className={`text-5xl font-bold pb-16 text-center tracking-wide ${anton.className}`}
+        >
+          Lets get in touch
+        </h2>
+
+        <ContactForm />
+        <ContactFormNew />
       </div>
     </main>
   );

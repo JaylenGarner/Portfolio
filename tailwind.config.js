@@ -85,6 +85,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        ice: "url('https://jaylen-garner.s3.amazonaws.com/Public/Assets/ice.jpg')",
+      },
       screens: {
         "break-1": "1420px",
         "break-2": "1200px",
