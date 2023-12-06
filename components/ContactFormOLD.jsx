@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { anton } from "@/lib/fonts";
 import { motion } from "framer-motion";
-import { Loader2 } from "lucide-react";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
+// import { Button } from "@/components/ui/button";
+// import { Loader2 } from "lucide-react";
+// import CardContainer from "./CardContainer";
 import handleEmail from "@/lib/handleEmail";
-import { CheckCircledIcon } from "@radix-ui/react-icons";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -35,74 +37,75 @@ const ContactForm = () => {
   };
 
   return (
-    <motion.div className="pt-8">
-      {!complete && (
-        <div className="w-[600px] flex justify-center bg-white rounded-lg text-[#1F2833] mt-8">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: "spring",
+        damping: 50,
+        stiffness: 80,
+      }}
+      className="tablet:pb-20 flex items-center justify-center pb-2 pt-2 max-break-2:w-[400px] max-tablet:pt-8 max-tablet:w-[600px] max-mobile_md:w-[400px] max-mobile_sm:w-[320px]"
+    >
+      {complete === true ? (
+        <CardContainer
+          title={`Email Recieved`}
+          description="Thanks for reaching out, I'll be in touch with you soon"
+        />
+      ) : (
+        <CardContainer
+          title="Contact Me"
+          description="Let's get in touch!"
+          className="max-break-2:w-[390px]"
+        >
           <form
-            className="flex_center  flex-col  w-full p-8"
+            className="space-y-4 text-center w-full "
             onSubmit={handleSubmit}
           >
-            <h4 className={` text-3xl font-bold pb-4 ${anton.className}`}>
-              Contact Me
-            </h4>
-
-            <input
+            <Input
               type="text"
-              className="input"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Name"
+              className="h-12"
               required
             />
-            <input
+            <Input
               type="email"
-              className="input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
+              className="h-12 "
               required
             />
-            <input
+            <Input
               type="text"
-              className="input"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               placeholder="Subject"
+              className="h-12 "
               required
             />
-            <textarea
-              type="text"
-              className="textarea"
+
+            <Textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Message..."
+              className="h-[200px] resize-none "
               required
             />
-
-            {!isLoading ? (
-              <button type="submit" className={`button ${anton.className}`}>
+            {isLoading === false ? (
+              <Button type="submit" variant="secondary" className="h-12 w-40">
                 Send
-              </button>
+              </Button>
             ) : (
-              <button
-                type="submit"
-                disabled
-                className={`button_loading ${anton.className}`}
-              >
-                <Loader2 className="animate-spin" size={30} color="#1F2833" />
-              </button>
+              <Button disabled className="h-12 w-40 space-x-2">
+                <Loader2 className="animate-spin" />
+                <span>Sending Email</span>
+              </Button>
             )}
           </form>
-        </div>
-      )}
-
-      {complete && (
-        <motion.div className="flex_center flex-col space-y-8 ">
-          <CheckCircledIcon width={80} height={80} />
-          <span className={`text-3xl ${anton.className}`}>
-            Thanks for reaching out, I'll be in touch shortly.
-          </span>
-        </motion.div>
+        </CardContainer>
       )}
     </motion.div>
   );

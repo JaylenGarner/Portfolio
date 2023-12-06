@@ -96,8 +96,16 @@
   @apply flex justify-center items-center
 }
 
+.button_template {
+  @apply border p-2 rounded-lg  w-[200px] h-[60px] mt-4 font-bold text-lg transition-colors duration-500
+}
+
 .button {
-  @apply border
+  @apply button_template bg-[#1F2833] text-[#66fcf1]  hover:bg-[#45A29E] hover:text-[#1F2833]
+}
+
+.button_loading {
+  @apply button_template flex_center bg-[#45A29E]  text-[#1F2833]
 }
 
 /* Navigation */

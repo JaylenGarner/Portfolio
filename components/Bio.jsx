@@ -6,7 +6,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import { Moon } from "lucide-react";
 
-import ContactForm from "./ContactForm";
+import ContactForm from "./ContactFormOLD";
 
 const Bio = () => {
   return (

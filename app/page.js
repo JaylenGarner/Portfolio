@@ -1,6 +1,5 @@
 import { anton, permanentMarker } from "@/lib/fonts";
 import ContactForm from "@/components/ContactForm";
-import ContactFormNew from "@/components/ContactFormNew";
 
 const Home = () => {
   return (
@@ -31,13 +30,11 @@ const Home = () => {
         </p>
 
         <h2
-          className={`text-5xl font-bold pb-16 text-center tracking-wide ${anton.className}`}
+          className={`text-5xl font-bold text-center tracking-wide ${anton.className} `}
         >
           Lets get in touch
         </h2>
-
         <ContactForm />
-        <ContactFormNew />
       </div>
     </main>
   );
