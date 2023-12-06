@@ -15,12 +15,22 @@ const socials = [{ name: "", icon: "/postcss.config.js", url: "/" }];
 const Navigation = () => {
   return (
     <motion.div
-      className={`w-full absolute top-0 flex justify-center pt-8 ${anton.className} tracking-wider`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className={`w-full absolute top-0 flex justify-center pt-8 ${anton.className} tracking-wider z-50`}
     >
       {pages.map((page) => {
         return (
           <Link href={page.path} key={page.page}>
-            <span className="text-2xl font-bold p-4">{page.page}</span>
+            <motion.span
+              initial={{ color: "#66fcf1" }}
+              whileHover={{ color: "#45A29E" }}
+              transition={{ duration: 0.3 }}
+              className="text-2xl font-bold p-4"
+            >
+              {page.page}
+            </motion.span>
           </Link>
         );
       })}
