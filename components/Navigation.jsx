@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const pages = [
   { page: "Home", path: "/" },
-  { page: "Experience", path: "/Experience" },
+  { page: "Experience", path: "/experience" },
   { page: "Projects", path: "/projects" },
 ];
 

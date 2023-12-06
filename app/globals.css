@@ -108,6 +108,14 @@
   @apply button_template flex_center bg-[#45A29E]  text-[#1F2833]
 }
 
+.heading {
+  @apply text-5xl font-bold text-center tracking-wide
+}
+
+.page_container {
+  @apply bg-ice bg-cover min-h-screen  bg-blend-darken bg-black bg-opacity-80 pt-[200px]
+}
+
 /* Navigation */
 
 /* Forms */

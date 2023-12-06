@@ -1,29 +1,24 @@
 "use client";
 
-import { useState } from "react";
 import { anton, permanentMarker } from "@/lib/fonts";
 import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 
 const Home = () => {
-  const currentForm = useState("none");
-
   return (
     <motion.main
-      className="bg-ice bg-cover min-h-screen  bg-blend-darken bg-black bg-opacity-80"
+      className="page_container"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="pt-[180px] flex flex-col items-center p-16">
+      <div className="flex flex-col items-center pl-16 pr-16 pb-16">
         <h1
           className={`text-8xl font-bold pb-16 text-center ${permanentMarker.className}`}
         >
           Jaylen Garner
         </h1>
-        <h2
-          className={`text-5xl font-bold pb-16 text-center tracking-wide ${anton.className}`}
-        >
+        <h2 className={`heading pb-16 tracking-wide ${anton.className}`}>
           Crafting Dreams, One Pixel at a Time
         </h2>
 
@@ -40,9 +35,7 @@ const Home = () => {
           here, clacking away at my keys in the meantime.
         </p>
 
-        <h2 className={`text-5xl font-bold tracking-wide ${anton.className} `}>
-          Lets get in touch
-        </h2>
+        <h2 className={`heading ${anton.className} `}>Let's get in touch</h2>
 
         <ContactForm />
       </div>

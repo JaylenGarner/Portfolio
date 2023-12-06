@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`text-[#66fcf1] bg-black ${rubik.className} `}>
+      <body className={`text-[#66fcf1] bg-black ${rubik.className}`}>
         <Navigation />
         {children}
         <Analytics />
