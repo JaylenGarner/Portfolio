@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import WorkExperience from "@/components/Experience";
+import Certifications from "@/components/Certifications";
 
 const Experience = () => {
   return (
@@ -12,6 +13,7 @@ const Experience = () => {
       transition={{ duration: 1 }}
     >
       <WorkExperience />
+      <Certifications />
     </motion.main>
   );
 };

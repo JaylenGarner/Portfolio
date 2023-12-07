@@ -1,6 +1,6 @@
 "use client";
 
-import certs from "@/lib/certs";
+import certs from "@/lib/certifications";
 import CertCard from "./CertCard";
 import { motion } from "framer-motion";
 
