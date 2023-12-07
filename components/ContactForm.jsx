@@ -42,7 +42,7 @@ const ContactForm = () => {
       className="pt-8"
     >
       {!complete && (
-        <div className="w-[600px] flex justify-center bg-white rounded-lg text-[#1F2833] mt-8 border-2 border-[#1F2833]">
+        <div className="w-[600px] flex justify-center bg-[#1F2833] rounded-xl text-[#66fcf1] mt-8 border-2 border-[#1F2833]">
           <form
             className="flex_center  flex-col  w-full p-8"
             onSubmit={handleSubmit}

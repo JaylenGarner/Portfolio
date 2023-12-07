@@ -101,7 +101,7 @@
 }
 
 .button {
-  @apply button_template bg-[#1F2833] text-[#66fcf1]  hover:bg-[#45A29E] hover:text-[#1F2833]
+  @apply button_template bg-[#66fcf1] text-[#1F2833]  hover:bg-[#45A29E] hover:text-[#1F2833]
 }
 
 .button_loading {
@@ -109,7 +109,7 @@
 }
 
 .heading {
-  @apply text-5xl font-bold text-center tracking-wide
+  @apply text-5xl font-bold text-center tracking-wide leading-snug
 }
 
 .page_container {
@@ -120,7 +120,7 @@
 
 /* Forms */
 .form_field {
-  @apply border p-2 rounded-md w-full text-sm placeholder:text-slate-600 m-2 focus:outline-[#1F2833]
+  @apply border p-2 rounded-md w-full text-sm placeholder:text-[#66fcf1] m-2 focus:outline-[#1F2833] bg-[#1F2833] border-[#66fcf1]
 }
 
 .input {

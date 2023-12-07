@@ -18,7 +18,7 @@ const Navigation = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className={`w-full absolute top-0 flex justify-center pt-8 ${anton.className} tracking-wider z-50`}
+      className={`w-full absolute top-0 flex justify-center pt-8 ${anton.className} tracking-widest z-50`}
     >
       {pages.map((page) => {
         return (
