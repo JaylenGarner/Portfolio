@@ -38,10 +38,10 @@ const ContactForm = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-8"
+      className="pt-8 max-sm:w-full"
     >
       {!complete && (
-        <div className="w-[600px] flex justify-center bg-[#1F2833] rounded-xl text-[#66fcf1] mt-8 border-2 border-[#1F2833]">
+        <div className="sm:w-[600px]  max-sm:max-w-full flex justify-center bg-[#1F2833] rounded-xl text-[#66fcf1] mt-8 border-2 border-[#1F2833] mb-16 ">
           <form
             className="flex_center  flex-col  w-full p-8"
             onSubmit={handleSubmit}
@@ -88,11 +88,14 @@ const ContactForm = () => {
                 Send
               </button>
             ) : (
-              <button
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2 }}
                 type="submit"
                 disabled
                 className={`button_loading ${anton.className}`}
-              ></button>
+              ></motion.button>
             )}
           </form>
         </div>
@@ -106,7 +109,7 @@ const ContactForm = () => {
           className="w-[600px] flex_center flex-col space-y-8 "
         >
           <CheckCircledIcon width={80} height={80} color="#66fcf1" />
-          <span className={`text-3xl ${anton.className}`}>
+          <span className={`text-3xl text-center ${anton.className}`}>
             Thanks for reaching out, I'll be in touch shortly.
           </span>
         </motion.div>

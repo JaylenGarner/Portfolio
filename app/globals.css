@@ -109,7 +109,7 @@
 }
 
 .heading {
-  @apply text-5xl font-bold text-center tracking-wide leading-snug
+  @apply text-5xl max-sm:text-4xl font-bold text-center tracking-wide leading-snug
 }
 
 .page_template {
@@ -136,7 +136,7 @@
 }
 
 .textarea {
-  @apply form_field h-[200px] resize-none
+  @apply form_field h-[200px] max-sm:h-[150px] resize-none
 }
 
 .feed {
