@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 const Home = () => {
   return (
     <motion.main
-      className="page_container"
+      className="page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -40,7 +40,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="flex flex-col flex_center pl-20 ">
+          <div className="flex flex-col flex_center pl-20">
             <h2 className={`heading ${anton.className} `}>
               Let's get in touch
             </h2>

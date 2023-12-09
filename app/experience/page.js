@@ -7,7 +7,7 @@ import Certifications from "@/components/Certifications";
 const Experience = () => {
   return (
     <motion.main
-      className="page_container"
+      className="page"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

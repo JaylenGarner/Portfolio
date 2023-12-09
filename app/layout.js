@@ -2,8 +2,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 
 import { Analytics } from "@vercel/analytics/react";
-
-import { rubik } from "../lib/fonts";
+import { robotoCondensed } from "../lib/fonts";
 
 export const metadata = {
   title: "Jaylen Garner",
@@ -13,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`text-[#66fcf1] bg-black ${rubik.className}`}>
+      <body className={`text-[#66fcf1] bg-black ${robotoCondensed.className}`}>
         <Navigation />
         {children}
         <Analytics />

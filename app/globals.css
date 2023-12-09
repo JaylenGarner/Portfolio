@@ -105,15 +105,23 @@
 }
 
 .button_loading {
-  @apply button_template flex_center bg-[#45A29E]  text-[#1F2833]
+  @apply button_template flex_center bg-[#45A29E]  text-[#66fcf1] bg-vortex bg-center
 }
 
 .heading {
   @apply text-5xl font-bold text-center tracking-wide leading-snug
 }
 
-.page_container {
-  @apply bg-ice bg-cover min-h-screen  bg-blend-darken bg-black bg-opacity-80 pt-[200px]
+.page_template {
+  @apply bg-cover min-h-screen  bg-blend-darken bg-black bg-opacity-80 pt-[160px]
+}
+
+.splash_page {
+  @apply page_template
+}
+
+.page {
+  @apply page_template bg-ice
 }
 
 /* Navigation */

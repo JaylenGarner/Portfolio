@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { anton } from "@/lib/fonts";
 import { motion } from "framer-motion";
-import { Loader2 } from "lucide-react";
 import handleEmail from "@/lib/handleEmail";
 import { CheckCircledIcon } from "@radix-ui/react-icons";
 
@@ -93,9 +92,7 @@ const ContactForm = () => {
                 type="submit"
                 disabled
                 className={`button_loading ${anton.className}`}
-              >
-                <Loader2 className="animate-spin" size={30} color="#1F2833" />
-              </button>
+              ></button>
             )}
           </form>
         </div>
@@ -106,7 +103,7 @@ const ContactForm = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex_center flex-col space-y-8 "
+          className="w-[600px] flex_center flex-col space-y-8 "
         >
           <CheckCircledIcon width={80} height={80} color="#66fcf1" />
           <span className={`text-3xl ${anton.className}`}>

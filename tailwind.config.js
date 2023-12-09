@@ -87,7 +87,10 @@ module.exports = {
       },
       backgroundImage: {
         ice: "url('https://jaylen-garner.s3.amazonaws.com/Public/Assets/ice.jpg')",
+        vortex:
+          "url('https://jaylen-garner.s3.amazonaws.com/Public/Assets/vortex.gif')",
       },
+
       screens: {
         "break-1": "1420px",
         "break-2": "1200px",
