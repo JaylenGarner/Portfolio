@@ -14,6 +14,7 @@ const Experience = () => {
     >
       <WorkExperience />
       <Certifications />
+      <div className="flex flex-col items-center max-sm:max-w-screen"></div>
     </motion.main>
   );
 };

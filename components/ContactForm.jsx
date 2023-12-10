@@ -18,14 +18,12 @@ const ContactForm = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    const formData = {
+    const response = await handleEmail({
       name,
       email,
       subject,
       message,
-    };
-
-    const response = await handleEmail(formData);
+    });
 
     if (response) {
       setIsLoading(false);
@@ -34,79 +32,63 @@ const ContactForm = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="pt-8 max-sm:w-full"
-    >
+    <>
+      {/* Form */}
       {!complete && (
-        <div className="sm:w-[600px]  max-sm:max-w-full flex justify-center bg-[#1F2833] rounded-xl text-[#66fcf1] mt-8 border-2 border-[#1F2833] mb-16 ">
-          <form
-            className="flex_center  flex-col  w-full p-8"
-            onSubmit={handleSubmit}
-          >
-            <h4 className={` text-3xl font-bold pb-4 ${anton.className}`}>
-              Contact Me
-            </h4>
+        <form className="form" onSubmit={handleSubmit}>
+          <h4 className={` text-3xl font-bold pb-4 ${anton.className}`}>
+            Contact Me
+          </h4>
 
-            <input
-              type="text"
-              className="input"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Name"
-              required
-            />
-            <input
-              type="email"
-              className="input"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email"
-              required
-            />
-            <input
-              type="text"
-              className="input"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              placeholder="Subject"
-              required
-            />
-            <textarea
-              type="text"
-              className="textarea"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="Message..."
-              required
-            />
+          <input
+            type="text"
+            className="input"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            className="input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            required
+          />
+          <input
+            type="text"
+            className="input"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+            placeholder="Subject"
+            required
+          />
+          <textarea
+            type="text"
+            className="textarea"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Message..."
+            required
+          />
 
-            {!isLoading ? (
-              <button type="submit" className={`button ${anton.className}`}>
-                Send
-              </button>
-            ) : (
-              <motion.button
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 2 }}
-                type="submit"
-                disabled
-                className={`button_loading ${anton.className}`}
-              ></motion.button>
-            )}
-          </form>
-        </div>
+          <button type="submit" className={`button ${anton.className}`}>
+            Send
+          </button>
+
+          {/* Loading Animation */}
+          {isLoading && <div className="form_loading" />}
+        </form>
       )}
 
+      {/* Success Message */}
       {complete && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="w-[600px] flex_center flex-col space-y-8 "
+          className="success"
         >
           <CheckCircledIcon width={80} height={80} color="#66fcf1" />
           <span className={`text-3xl text-center ${anton.className}`}>
@@ -114,7 +96,7 @@ const ContactForm = () => {
           </span>
         </motion.div>
       )}
-    </motion.div>
+    </>
   );
 };
 

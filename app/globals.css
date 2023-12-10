@@ -109,24 +109,50 @@
 }
 
 .heading {
-  @apply text-5xl max-sm:text-4xl font-bold text-center tracking-wide leading-snug
+  @apply text-5xl max-sm:text-4xl font-bold text-center tracking-wide leading-snug pr-4 pl-4
 }
 
-.page_template {
-  @apply bg-cover min-h-screen  bg-blend-darken bg-black bg-opacity-80 pt-[160px]
-}
-
-.splash_page {
-  @apply page_template
+.paragraph {
+  @apply  w-full 2xl:w-2/3   text-2xl max-sm:text-xl
 }
 
 .page {
-  @apply page_template bg-ice
+  @apply  bg-ice bg-cover min-h-screen max-w-full  bg-blend-darken bg-black bg-opacity-80 pt-[120px]
 }
+
 
 /* Navigation */
 
+/* Splash Page */
+
+.main_heading {
+  @apply text-8xl max-sm:text-7xl  font-bold pb-8 pr-4 pl-4 text-center
+}
+
+.splash_grid {
+  @apply lg:grid lg:grid-cols-2 lg:gap-20 lg:min-h-full
+}
+
+
+
+.splash_container {
+  @apply splash_grid max-lg:space-y-16 mt-8 p-8
+}
+
+.paragraph_container {
+  @apply flex justify-end items-start max-lg:h-fit
+}
+
+.form_container {
+  @apply flex justify-start items-start max-lg:justify-center
+}
+
 /* Forms */
+
+.form {
+  @apply relative flex_center flex-col max-sm:w-full sm:w-[600px]  border-2 border-[#66fcf1] rounded-lg   text-[#66fcf1] p-8
+}
+
 .form_field {
   @apply border p-2 rounded-md w-full text-sm placeholder:text-[#66fcf1] m-2 focus:outline-[#1F2833] bg-[#1F2833] border-[#66fcf1]
 }
@@ -136,13 +162,13 @@
 }
 
 .textarea {
-  @apply form_field h-[200px] max-sm:h-[150px] resize-none
+  @apply form_field h-[180px] max-sm:h-[150px] resize-none
 }
 
-.feed {
-  @apply pt-8 pb-20 space-y-6 pl-10 pr-10
+.form_loading {
+  @apply absolute top-0 left-0 h-full w-full bg-vortex bg-cover rounded-lg
 }
 
-.card {
-  @apply break-1:w-[600px] max-break-1:w-[500px] max-break-2:w-[400px] max-tablet:w-[600px] max-mobile_lg:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] h-fit cursor-pointer
+.success {
+  @apply w-[600px] flex_center h-full flex-col text-center space-y-4
 }
