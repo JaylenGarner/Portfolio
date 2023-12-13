@@ -19,8 +19,8 @@ const Home = () => {
         Crafting Dreams, One Pixel at a Time
       </h2>
       <div className="splash_container ">
-        <div className="paragraph_container">
-          <p className="paragraph ">
+        <div className="flex_center">
+          <p className="paragraph xl:w-2/3 2xl:w-1/2">
             Having navigated the intricacies of IT, I've discovered my sweet
             spot in the dynamic world of full-stack development. The ability to
             wield the skills and tools to breathe life into visions, both mine
@@ -34,7 +34,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="form_container">
+        <div className="flex_center ">
           <ContactForm />
         </div>
       </div>

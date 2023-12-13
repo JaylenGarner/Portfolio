@@ -129,22 +129,8 @@
   @apply text-8xl max-sm:text-7xl  font-bold pb-8 pr-4 pl-4 text-center
 }
 
-.splash_grid {
-  @apply lg:grid lg:grid-cols-2 lg:gap-20 lg:min-h-full
-}
-
-
-
 .splash_container {
-  @apply splash_grid max-lg:space-y-16 mt-8 p-8
-}
-
-.paragraph_container {
-  @apply flex justify-end items-start max-lg:h-fit
-}
-
-.form_container {
-  @apply flex justify-start items-start max-lg:justify-center
+  @apply flex flex-col space-y-16 mt-8 p-8
 }
 
 /* Forms */
@@ -170,5 +156,5 @@
 }
 
 .success {
-  @apply w-[600px] flex_center h-full flex-col text-center space-y-4
+  @apply  flex_center h-full flex-col text-center space-y-4
 }
