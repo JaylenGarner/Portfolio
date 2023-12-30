@@ -8,14 +8,12 @@ import {
 
 const CardContainer = ({ title, description, children }) => {
   return (
-    <Card className="break-1:w-[600px] h-fit max-break-1:w-[500px] max-break-2:[400px]">
+    <Card className="break-1:w-[600px] h-fit max-break-1:w-[500px] max-break-2:[400px] glass ">
       <CardHeader className="max-break-2:[400px]">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent >
-        {children}
-      </CardContent>
+      <CardContent>{children}</CardContent>
     </Card>
   );
 };

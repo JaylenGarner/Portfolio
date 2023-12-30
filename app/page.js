@@ -26,7 +26,11 @@ const Home = () => {
           stiffness: 80,
         }}
       >
-        <Button onClick={() => setFormOpen(!formOpen)}>Contact Me</Button>
+        <button className="button glass" onClick={() => setFormOpen(!formOpen)}>
+          {!formOpen ? "Contact Me" : "Cancel"}
+        </button>
+
+        {/* <Button onClick={() => setFormOpen(!formOpen)}>Contact Me</Button> */}
         {formOpen && <ContactForm />}
       </motion.div>
 

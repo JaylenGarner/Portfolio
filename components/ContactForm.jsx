@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import CardContainer from "./CardContainer";
 import handleEmail from "@/lib/handleEmail";
@@ -94,16 +93,18 @@ const ContactForm = () => {
               className="h-[200px] resize-none "
               required
             />
-            {isLoading === false ? (
-              <Button type="submit" variant="secondary" className="h-12 w-40">
-                Send
-              </Button>
-            ) : (
-              <Button disabled className="h-12 w-40 space-x-2">
-                <Loader2 className="animate-spin" />
-                <span>Sending Email</span>
-              </Button>
-            )}
+
+            <div className="w-full flex justify-center">
+              {isLoading === false ? (
+                <button className="button hover:bg-white hover:text-black transition-all duration-300">
+                  Send
+                </button>
+              ) : (
+                <button className="button bg-white" disabled>
+                  <Loader2 className="text-black animate-spin" />
+                </button>
+              )}
+            </div>
           </form>
         </CardContainer>
       )}
