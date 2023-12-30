@@ -93,6 +93,9 @@ module.exports = {
         mobile_md: "580px",
         mobile_sm: "480px",
       },
+      backgroundImage: {
+        ice: "url('https://jaylen-garner.s3.amazonaws.com/Public/Assets/ice.jpg')",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
