@@ -3,7 +3,6 @@
 import Bio from "@/components/Bio";
 import Feed from "@/components/Feed";
 import ContactForm from "@/components/ContactForm";
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
