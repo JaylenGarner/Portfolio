@@ -36,7 +36,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 0 0% 0%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -91,7 +91,7 @@
 }
 
 .main {
-  @apply bg-ice bg-opacity-80 bg-blend-darken bg-black
+  @apply bg-ice  bg-opacity-80 bg-blend-darken bg-black
 }
 
 .feed {

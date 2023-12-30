@@ -11,9 +11,7 @@ import ContactForm from "./ContactForm";
 const Bio = () => {
   return (
     <div className="tablet:mr-10 flex flex-col justify-center items-center space-y-8 max-break-2:w-[400px] max-tablet:w-[500px] max-mobile_md:w-[400px] max-mobile_sm:w-[300px] overflow-wrap max-tablet:text-center">
-      <motion.div
-        initial={{ opacity: 0, x: -30 }}
-        animate={{ opacity: 1, x: 0 }}
+      <div
         transition={{
           type: "spring",
           damping: 50,
@@ -76,7 +74,7 @@ const Bio = () => {
           functionality. With a passion for programming, I take pride in
           delivering high-quality work while continually enhancing my skillset.
         </p>
-      </motion.div>
+      </div>
 
       {/* Disable on Mobile Devices */}
       <div className="max-tablet:hidden">

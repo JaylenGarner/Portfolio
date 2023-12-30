@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Loader2 } from "lucide-react";
@@ -36,16 +35,7 @@ const ContactForm = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        type: "spring",
-        damping: 50,
-        stiffness: 80,
-      }}
-      className="tablet:pb-20 flex items-center justify-center pb-2 pt-2 max-break-2:w-[400px] max-tablet:pt-8 max-tablet:w-[600px] max-mobile_md:w-[400px] max-mobile_sm:w-[320px]"
-    >
+    <div className="tablet:pb-20 flex items-center justify-center pb-2 pt-2 max-break-2:w-[400px] max-tablet:pt-8 max-tablet:w-[600px] max-mobile_md:w-[400px] max-mobile_sm:w-[320px]">
       {complete === true ? (
         <CardContainer
           title={`Email Recieved`}
@@ -94,7 +84,7 @@ const ContactForm = () => {
               required
             />
 
-            <div className="w-full flex justify-center">
+            <div className="w-full flex justify-center pt-2">
               {isLoading === false ? (
                 <button className="button hover:bg-white hover:text-black transition-all duration-300">
                   Send
@@ -108,7 +98,7 @@ const ContactForm = () => {
           </form>
         </CardContainer>
       )}
-    </motion.div>
+    </div>
   );
 };
 
