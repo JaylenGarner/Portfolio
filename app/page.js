@@ -13,7 +13,7 @@ const Home = () => {
     <motion.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 2 }}
       className="grid grid-cols-2 max-tablet:grid-cols-1 gap-x-10 pr-4 pl-4 main"
     >
       <div className="max-tablet:justify-center  w-full flex justify-end items-start pt-8 tablet:h-screen tablet:overflow-scroll no-scrollbar">
